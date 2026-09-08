@@ -33,8 +33,3 @@ personal project to practice financial modeling.
 - Balance sheet had an error with forecasting, where all but one year would balance. I fixed this by combing through my formulas, and seeing that I had correctly copied across. This led me to see that it was a rounding error causing the issue, since these formulas lead to numbers with 5+ decimals and my balance checker required an exact match. I then changed my "balance checker" formula from IF to IF with ROUND, which fixed this decimal discrepancy.
 - When finding present value of FCF, my formula wasn't referencing the changing years, and was referencing nothing, leading to the same value result from discounting using WACC. I fixed this by making sure my formulas were actually locked using the $ symbol for both the row and column, which allowed me to reference the single WACC cell but change the result based on the amount of years I was discounting by. 
 - My sensitivity Table had a circular reference because I used the actual TGR and WACC values as a reference in the table instead of hardcoding. This led to the values under those columns to not change from the previous values, giving me an inaccurate view on how changing TGR and WACC affects the implied share price. Instead of referencing the cell in my spreadsheet, I manually entered the WACC of 10.1% and TGR of 3.5% to prevent the circular reference from occuring, leading to an accurate portrayal of the share price.
-
-<img width="772" height="768" alt="image" src="https://github.com/user-attachments/assets/e01e5f68-7d84-43d9-a95e-929a16a632d4" />
-
-<img width="707" height="642" alt="image" src="https://github.com/user-attachments/assets/8db5de09-a2b0-4c42-a2d2-c117b8fc52db" />
-
